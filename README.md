@@ -4,5 +4,5 @@ Is roguelike game inspired by STALKER series. Anomalies, habar, artifacts, NPC, 
 This game is just a try in roguelike development on python using tcod.
 ## I personally follow this steps
 ![My Plan](https://habrastorage.org/getpro/habr/post_images/8ac/6b5/eb7/8ac6b5eb72dc309e8ed002abc5babc91.png)
-#Reference
+# Reference
 ![Thanks for the article](https://habr.com/ru/post/428620/)
