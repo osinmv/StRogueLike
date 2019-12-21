@@ -19,16 +19,19 @@ class Entity():
         self.x += x
         self.y += y
 
-    def draw(self, console: tcod.console.Console):
+# def draw_entity(self, console: tcod.console.Console):
         """Draw self.symbol at self.x,self.y on console
         """
-        tcod.console_set_default_foreground(console, self.color)
-        tcod.console_put_char(console, self.x, self.y,
-                              self.symbol, tcod.BKGND_NONE)
-
-    def clear(self, console: tcod.console.Console):
-        """Clear cell at self.x,self.y on console
-        """
-        tcod.console_set_default_foreground(console, DEFAULT_FOREGROUND)
-        tcod.console_put_char(console, self.x, self.y,
-                              " ", tcod.BKGND_NONE)
+#         
+# 
+# def clear_entity(self, console: tcod.console.Console):
+#         """Clear cell at self.x,self.y on console
+#         """
+#         tcod.console_set_default_foreground(console, DEFAULT_FOREGROUND)
+#         tcod.console_put_char(console, self.x, self.y,
+#                               " ", tcod.BKGND_NONE)
+# 
+    # def damage_decorator(self,func:typing.Callable[[],None]):
+    #    """Wrap damage function
+    #    """
+    #    def apply_damage(self,):

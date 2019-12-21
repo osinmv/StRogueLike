@@ -1,2 +1,2 @@
-from .tiles import Tile
-from .world_generation import generate_global_map
+from .tiles import *
+from .world_generation import *

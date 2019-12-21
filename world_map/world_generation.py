@@ -12,7 +12,7 @@ from .tweaks import UPPER_BOUND, MID_BOUND
 #
 
 
-def generate_global_map(shape: tuple) -> typing.List[typing.List[float]]:
+def generate_global_map(shape: tuple) -> typing.List[typing.List[Tile]]:
     """Return simple rectangular map with shape shape
     Precondition: len(shape)==2
     """
@@ -37,3 +37,7 @@ def generate_global_map(shape: tuple) -> typing.List[typing.List[float]]:
                 holder.append(Tile(False))
         tile_map.append(holder)
     return tile_map
+
+def check_walkable(map)-> bool:
+    pass
+    
