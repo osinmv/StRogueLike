@@ -38,6 +38,25 @@ def generate_global_map(shape: tuple) -> typing.List[typing.List[Tile]]:
         tile_map.append(holder)
     return tile_map
 
-def check_walkable(map)-> bool:
-    pass
-    
+
+def get_neighbours(game_map: typing.List[typing.List[Tile]],
+                   point: tuple, strict=None) -> bool:
+    """Return neighbours around point, according strict or not  the rule is
+    """
+    if strict is None:
+        strict = False
+    x0, y0 = point
+    accumilator = []
+    for y in range(-1, 2):
+        for x in range(-1, 2):
+            if y == 0 and x == 0:
+                continue
+            new_y = y0+y
+            new_x = x0+x
+            if 0 < new_y < len(game_map) and 0 < new_x < len(game_map[0]):
+                if strict:
+                    if not game_map[new_y][new_x].blocked:
+                        accumilator.append((new_x, new_y))
+                else:
+                    accumilator.append((new_x, new_y))
+    return accumilator
