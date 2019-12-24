@@ -11,6 +11,10 @@ PLAYER = Entity("STALKER", 30, 30, chr(33), PLAYER_FOREGROUND)
 CURRENT_LOCATION = SWAMP_COLORS
 ENTITIES = []
 
+ACTIONS = {
+    "move": (PLAYER.move, "move", "game_map")
+}
+
 
 def draw_tile(x: int, y: int, console: tcod.console.Console,
               tile_type: str, symbol: str, color=None) -> None:

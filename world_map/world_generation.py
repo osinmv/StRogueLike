@@ -53,7 +53,7 @@ def get_neighbours(game_map: typing.List[typing.List[Tile]],
                 continue
             new_y = y0+y
             new_x = x0+x
-            if 0 < new_y < len(game_map) and 0 < new_x < len(game_map[0]):
+            if 0 <= new_y < len(game_map) and 0 <= new_x < len(game_map[0]):
                 if strict:
                     if not game_map[new_y][new_x].blocked:
                         accumilator.append((new_x, new_y))
